@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>تسجيل الدخول | EduPlatform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<nav class="navbar">
+  <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo" style="height:40px;"></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="about.html">عن المنصة</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+    <li><a href="profile.html">حسابي</a></li>
+    <li><a href="login.html" class="btn">تسجيل الدخول</a></li>
+  </ul>
+</nav>
+
+  <main class="container auth-page">
+    <section class="auth-card">
+      <h2>تسجيل الدخول</h2>
+      <form id="login-form">
+        <label>البريد الإلكتروني
+          <input type="email" id="email" required placeholder="email@example.com">
+        </label>
+        <label>كلمة المرور
+          <input type="password" id="password" required placeholder="******">
+        </label>
+        <button type="submit" class="btn">دخول</button>
+      </form>
+
+      <p class="muted">ليس لديك حساب؟ <a href="#" id="to-register">إنشاء حساب</a></p>
+
+      <div class="divider">أو</div>
+      <button class="btn google">تسجيل بحساب Google</button>
+    </section>
+  </main>
+
+  
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 EduPlatform. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

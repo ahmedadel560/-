@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hello World Academy | الرئيسية</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #001f3f;
+      padding: 10px 20px;
+    }
+
+    /* اللوجو */
+    .navbar .logo img {
+      height: 40px;
+    }
+
+    /* زر القائمة (الهامبرجر) */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* اللينكات */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      background-color: #74767f;
+      border-radius: 10px;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #ffcc00;
+    }
+
+    /* زرار تسجيل الدخول */
+    .login-btn .btn {
+      background: #ffcc00;
+      color: #001f3f;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .login-btn .btn:hover {
+      background: #e6b800;
+    }
+
+    .btn.small {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+
+    /* Banner */
+    .banner {
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    .banner-content {
+      position: absolute;
+      top: 43%;
+      right: 50%;
+      transform: translate(50%, -50%);
+      color: #fff;
+      text-align: center;
+    }
+
+    .banner-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      padding: 30px;
+      position: relative;
+      bottom: 30px;
+    }
+
+    .banner-content .two {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      position: relative;
+      top: 10px;
+    }
+
+    /* Sections */
+    .container {
+      width: 97%;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #001f3f;
+      text-align: center;
+      font-size: 40px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .categories-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: #1c85dc;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: #001f3f;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #ffcc00;
+      color: #001f3f;
+    }
+
+    /* Featured Courses */
+    .featured .grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .course-card {
+      background: #5e88db;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .course-card h3 {
+      margin: 10px 0;
+      font-size: 1.4rem;
+      color: #001f3f;
+    }
+
+    .course-card .meta {
+      font-size: 0.9rem;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #001f3f;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #001f3f;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .navbar .logo img {
+        height: 30px;
+      }
+
+      .banner img {
+        height: 220px;
+      }
+
+      .banner-content h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      .course-card img {
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .banner img {
+        height: 280px;
+      }
+
+      .banner-content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+<nav class="navbar">
+  <span class="menu-toggle">☰</span>
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.svg" alt="logo"></a>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="about.html">عن المنصة</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+    <li><a href="profile.html">حسابي</a></li>
+  </ul>
+
+  <div class="login-btn">
+    <a href="login.html" class="btn">تسجيل الدخول</a>
+  </div>
+</nav>
+
+<main>
+  <section class="banner">
+    <img src="images/banner.svg" alt="banner" class="banner-img">
+    <div class="banner-content">
+      <h1>تعلم أي شيء في أي وقت</h1>
+      <div class="two">
+        <p>انضم إلى آلاف الطلاب وابدأ رحلتك التعليمية الآن</p>
+        <a href="courses.html" class="btn">ابدأ الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container categories">
+    <h2>الأقسام</h2>
+    <div class="grid categories-grid">
+      <div class="card">برمجة</div>
+      <div class="card">ذكاء اصطناعي</div>
+      <div class="card">تصميم</div>
+      <div class="card">سكيورتي</div>
+      <div class="card">إدارة مشاريع</div>
+      <div class="card">قواعد بيانات</div>
+    </div>
+  </section>
+
+  <section class="container featured">
+    <h2>كورسات مميزة</h2>
+    <div class="grid">
+      <div class="course-card">
+        <img src="images/OIP (1).jpeg" alt="">
+        <h3>مقدمة في البرمجة</h3>
+        <p class="meta">المدرب: أحمد علي • ⭐ 4.7 • مجاني</p>
+        <a href="course-details.html" class="btn small">تفاصيل</a>
+      </div>
+      <div class="course-card">
+        <img src="images/OIP (2).jpeg" alt="">
+        <h3>أساسيات الذكاء الاصطناعي</h3>
+        <p class="meta">المدربة: سارة محمد • ⭐ 4.8 • $19</p>
+        <a href="course-details.html" class="btn small">تفاصيل</a>
+      </div>
+      <div class="course-card">
+        <img src="images/OIP (3).jpeg" alt="">
+        <h3>تصميم واجهات المستخدم</h3>
+        <p class="meta">المدرب: علي حسن • ⭐ 4.6 • $9</p>
+        <a href="course-details.html" class="btn small">تفاصيل</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 Hello World Academy. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('active');
+});
+</script>
+
+</body>
+</html>

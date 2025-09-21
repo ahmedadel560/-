@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>تواصل معنا | EduPlatform</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<nav class="navbar">
+  <div class="logo"><a href="index.html"><img src="images/logo.svg" alt="logo" style="height:40px;"></a></div>
+  <ul class="nav-links">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="about.html">عن المنصة</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+    <li><a href="profile.html">حسابي</a></li>
+    <li><a href="login.html" class="btn">تسجيل الدخول</a></li>
+  </ul>
+</nav>
+
+  <main class="container">
+    <section class="contact">
+      <h1>تواصل معنا</h1>
+      <form id="contact-form">
+        <label>الاسم
+          <input type="text" id="contact-name" required>
+        </label>
+        <label>البريد الإلكتروني
+          <input type="email" id="contact-email" required>
+        </label>
+        <label>الرسالة
+          <textarea id="contact-message" rows="6" required></textarea>
+        </label>
+        <button type="submit" class="btn">إرسال</button>
+      </form>
+      <p id="contact-result" class="muted"></p>
+    </section>
+  </main>
+
+  
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 EduPlatform. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

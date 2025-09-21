@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>EduPlatform | الكورسات</title>
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+   <style>
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #001f3f;
+  padding: 10px 20px;
+}
+
+/* اللوجو */
+.navbar .logo img {
+  height: 40px;
+}
+
+/* اللينكات في النص */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: center; /* علشان تيجي في النص */
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+/* زرار تسجيل الدخول */
+.login-btn .btn {
+  background: #ffcc00;
+  color: #001f3f;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.login-btn .btn:hover {
+  background: #e6b800;
+}
+
+
+/* زرار تسجيل الدخول */
+.login-btn .btn {
+  background: #ffcc00;
+  color: #001f3f;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.login-btn .btn:hover {
+  background: #dfbb06;
+}
+
+
+    .nav-links li a {
+      color: #fff;
+      background-color: #74767f;
+      border-radius: 10px;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #ffcc00;
+    }
+
+    .btn {
+      background: #ffcc00;
+      color: #001f3f;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #e6b800;
+      width: fit-content;
+    }
+
+    .btn.small {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+        .container {
+      width: 97%;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #001f3f;
+      text-align: center;
+      font-size: 40px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .categories-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .card {
+      background: #1c85dc;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: #001f3f;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #ffcc00;
+      color: #001f3f;
+    }
+/* search */
+.courses-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.courses-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #0d3b66; /* كحلي غامق */
+}
+
+/* controls container */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* input & selects */
+.controls input,
+.controls select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.controls input:focus,
+.controls select:focus {
+  border-color: #0d3b66;
+  box-shadow: 0 0 8px rgba(13, 59, 102, 0.4);
+}
+
+/* زر البحث (لو عايز تضيفه لاحقًا) */
+.controls button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #0d3b66;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.controls button:hover {
+  background: #145ea8;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls input,
+  .controls select,
+  .controls button {
+    width: 100%;
+  }
+}
+
+    /* Featured Courses */
+    .featured .grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .course-card {
+      background: #5e88db;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .course-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    
+    }
+
+    .course-card h3 {
+      margin: 10px 0;
+      font-size: 1.4rem;
+      color: #001f3f;
+    }
+
+    .course-card .meta {
+      font-size: 0.9rem;
+      color: #000000;
+      margin-bottom: 10px;
+    }
+   </style>
+</head>
+<body>
+  
+<nav class="navbar">
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.svg" alt="logo"></a>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="about.html">عن المنصة</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+    <li><a href="profile.html">حسابي</a></li>
+  </ul>
+
+  <div class="login-btn">
+    <a href="login.html" class="btn">تسجيل الدخول</a>
+  </div>
+</nav>
+
+
+    <section class="courses-page">
+      <h1>جميع الكورسات</h1>
+
+      <div class="controls">
+        <input type="text" id="search" placeholder="ابحث عن كورس..." aria-label="search courses">
+        <select id="category-filter">
+          <option value="">كل الأقسام</option>
+          <option>برمجة</option>
+          <option>ذكاء اصطناعي</option>
+          <option>تصميم</option>
+        </select>
+        <select id="sort">
+          <option value="default">ترتيب</option>
+          <option value="price-asc">السعر: الأقل أولاً</option>
+          <option value="price-desc">السعر: الأعلى أولاً</option>
+          <option value="rating">التقييم</option>
+        </select>
+      </div>
+</section>
+
+  <section class="container featured">
+
+    <div class="grid">
+      <div class="course-card">
+        <img class="imge"  src="images/OIP (1).jpeg" alt="">
+        <h3>مقدمة في البرمجة</h3>
+        <p class="meta">المدرب: أحمد علي • ⭐ 4.7 • مجاني</p>
+        <a href="course-details.html" class="btn small">تفاصيل</a>
+      </div>
+      <div class="course-card">
+        <img class="imge"  src="images/OIP (2).jpeg" alt="">
+        <h3>أساسيات الذكاء الاصطناعي</h3>
+        <p class="meta">المدربة: سارة محمد • ⭐ 4.8 • $19</p>
+        <a href="course-details.html" class="btn small">تفاصيل</a>
+      </div>
+      <div class="course-card">
+        <img class="imge" src="images/OIP (3).jpeg" alt="">
+        <h3>تصميم واجهات المستخدم</h3>
+        <p class="meta">المدرب: علي حسن • ⭐ 4.6 • $9</p>
+        <a href="course-details.html" class="btn small">تفاصيل</a>
+      </div>
+    </div>
+  </section>
+
+
+  
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2025 EduPlatform. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

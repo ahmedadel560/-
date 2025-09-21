@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة تعليمية</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <style>
+        /* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    direction: rtl; /* للعرض باللغة العربية */
+
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+           min-height: 100vh;
+    margin: 0;
+    direction: rtl;
+      font-family: 'Tahoma', sans-serif;
+      background: #f5f7fa;
+      color: #f5f5f5;
+      line-height: 1.6;
+      background-color: #001f3f;
+    }
+    .ass{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    direction: rtl;
+    }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #001f3f;
+  padding: 10px 20px;
+}
+
+/* اللوجو */
+.navbar .logo img {
+  height: 40px;
+}
+
+/* اللينكات في النص */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  justify-content: center; /* علشان تيجي في النص */
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffcc00;
+}
+
+/* زرار تسجيل الدخول */
+.login-btn .btn {
+  background: #ffcc00;
+  color: #001f3f;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.login-btn .btn:hover {
+  background: #e6b800;
+}
+
+
+/* زرار تسجيل الدخول */
+.login-btn .btn {
+  background: #ffcc00;
+  color: #001f3f;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.login-btn .btn:hover {
+  background: #dfbb06;
+}
+
+
+    .nav-links li a {
+      color: #fff;
+      background-color: #74767f;
+      border-radius: 10px;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #ffcc00;
+    }
+
+    .btn {
+      background: #ffcc00;
+      color: #001f3f;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #e6b800;
+      width: fit-content;
+    }
+
+    .btn.small {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+    .details-grid .media img{
+        width: 80%;
+        height: 400px;
+ 
+    }
+
+.video-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    color: #0056b3;
+}
+
+.video-wrapper {
+    margin-bottom: 20px;
+}
+
+#course-video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.controls button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.video-list {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.video-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.video-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: right;
+}
+
+.video-list li.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+     </style>
+</head>
+<body>
+    <nav class="navbar">
+  <div class="logo">
+    <a href="index.html"><img src="images/logo.svg" alt="logo"></a>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">الرئيسية</a></li>
+    <li><a href="courses.html">الكورسات</a></li>
+    <li><a href="about.html">عن المنصة</a></li>
+    <li><a href="contact.html">تواصل معنا</a></li>
+    <li><a href="profile.html">حسابي</a></li>
+  </ul>
+
+  <div class="login-btn">
+    <a href="login.html" class="btn">تسجيل الدخول</a>
+  </div>
+</nav>
+
+  <main class="container course-details">
+    <div class="details-grid">
+      <div class="media">
+        <img src="images/OIP (1).jpeg" alt="course image">
+      </div>
+      <div class="info">
+        <h1>مقدمة في البرمجة</h1>
+        <p class="meta">المدرب: أحمد علي • ⭐ 4.7</p>
+        <p class="description">هذا الكورس يشرح أساسيات البرمجة: المتغيرات، الشروط، الحلقات، والدوال. مناسب للمبتدئين.</p>
+
+        <h3>محتويات الكورس</h3>
+        <ol>
+          <li>مقدمة</li>
+          <li>المتغيرات وأنواع البيانات</li>
+          <li>الشروط والحلقات</li>
+          <li>الدوال</li>
+        </ol>
+
+        <button class="btn" id="enroll-btn">اشترك الآن</button>
+      </div>
+    </div>
+  </main>
+
+
+<section class="ass">
+    <div class="video-container">
+        <h1>مقدمة في البرمجة</h1>
+        <div class="video-wrapper">
+            <video id="course-video" controls autoplay height="300px" width="500px">
+                <source id="video-source">
+                <source  src="vedios/فيديو واتساب بتاريخ 2025-07-25 في 06.18.49_23ef068f.mp4" type="video/mp4">
+                                <source  src="vedios/فيديو واتساب بتاريخ 2025-07-25 في 06.18.49_23ef068f.mp4" type="video/mp4">
+                                <source  src="vedios/فيديو واتساب بتاريخ 2025-07-25 في 06.19.13_533ec88a.mp4" type="video/mp4">
+                                 <source  src="vedios/فيديو واتساب بتاريخ 2025-07-25 في 06.20.28_682dfc6c.mp4" type="video/mp4">
+                                 <source  src="vedios/فيديو واتساب بتاريخ 2025-07-25 في 06.18.49_23ef068f.mp4" type="video/mp4">
+                                <source  src="vedios/فيديو واتساب بتاريخ 2025-07-25 في 06.20.30_38708229.mp4" type="video/mp4">
+                متصفحك لا يدعم وسم الفيديو.
+            </video>
+        </div>
+        <div class="controls">
+            <button id="prev-btn">السابق</button>
+            <button id="next-btn">التالي</button>
+        </div>
+        <div class="video-list">
+            </div>
+    </div>
+    </section>
+    <script >
+        // تعريف قائمة الفيديوهات
+const videos = [
+    { title: '1. ما هي البرمجة؟', src: 'videos/intro.mp4' },
+    { title: '2. أساسيات HTML', src: 'videos/html_basics.mp4' },
+    { title: '3. التنسيق بـ CSS', src: 'videos/css_styling.mp4' },
+    { title: '4. مقدمة في JavaScript', src: 'videos/js_intro.mp4' },
+    { title: '5. بناء صفحة الويب الأولى', src: 'videos/first_page.mp4' }
+];
+
+// جلب العناصر من HTML
+const videoPlayer = document.getElementById('course-video');
+const videoSource = document.getElementById('video-source');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const videoList = document.querySelector('.video-list');
+
+let currentVideoIndex = 0; // مؤشر لتتبع الفيديو الحالي
+
+// دالة لتغيير الفيديو
+function changeVideo(index) {
+    if (index >= 0 && index < videos.length) {
+        currentVideoIndex = index;
+        videoSource.src = videos[currentVideoIndex].src;
+        videoPlayer.load(); // إعادة تحميل الفيديو
+        videoPlayer.play(); // تشغيل الفيديو تلقائياً
+        updateButtonState(); // تحديث حالة الأزرار
+        updateVideoList(); // تحديث قائمة الفيديوهات
+    }
+}
+
+// دالة لتحديث حالة أزرار "التالي" و "السابق"
+function updateButtonState() {
+    prevBtn.disabled = (currentVideoIndex === 0);
+    nextBtn.disabled = (currentVideoIndex === videos.length - 1);
+}
+
+// دالة لإنشاء وتحديث قائمة الفيديوهات
+function updateVideoList() {
+    videoList.innerHTML = '<h2>قائمة الفيديوهات</h2><ul></ul>';
+    const listUl = videoList.querySelector('ul');
+    videos.forEach((video, index) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = video.title;
+        listItem.addEventListener('click', () => {
+            changeVideo(index);
+        });
+        if (index === currentVideoIndex) {
+            listItem.classList.add('active'); // إضافة كلاس active للفيديو الحالي
+        }
+        listUl.appendChild(listItem);
+    });
+}
+
+// الاستماع لأزرار التحكم
+nextBtn.addEventListener('click', () => {
+    if (currentVideoIndex < videos.length - 1) {
+        changeVideo(currentVideoIndex + 1);
+    }
+});
+
+prevBtn.addEventListener('click', () => {
+    if (currentVideoIndex > 0) {
+        changeVideo(currentVideoIndex - 1);
+    }
+});
+
+// تهيئة الصفحة عند التحميل
+document.addEventListener('DOMContentLoaded', () => {
+    changeVideo(0); // تشغيل أول فيديو عند تحميل الصفحة
+});
+    </script>
+</body>
+</html>
